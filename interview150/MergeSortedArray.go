@@ -4,7 +4,7 @@ import (
 	"sort"
 )
 
-// MergeSortedArray
+// Merge Sorted Array
 // https://leetcode.com/problems/merge-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
 func MergeSortedArray() {
 	var nums1 = []int{1, 2, 3, 0, 0, 0}

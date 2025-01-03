@@ -8,15 +8,15 @@ func TwoSum() {
 	fmt.Println(twoSum([]int{2, 7, 11, 15}, 9))
 }
 
-func twoSum(numbers []int, target int) []int {
+func twoSum(nums []int, target int) []int {
 	m := make(map[int]int)
-	for idx, v := range numbers {
-		m[v] = idx
-	}
-	for idx, v := range numbers {
-		if val, ok := m[target-v]; ok {
-			return []int{idx + 1, val + 1}
+
+	for i, v := range nums {
+		if idx, ok := m[target-v]; ok && i != idx {
+			return []int{idx, i}
 		}
+		m[v] = i
 	}
+
 	return []int{}
 }
