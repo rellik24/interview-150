@@ -36,17 +36,3 @@ func insertInterval(intervals [][]int, newInterval []int) [][]int {
 	}
 	return result
 }
-
-func getMin(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
-}
-
-func getMax(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
