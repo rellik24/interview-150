@@ -3,6 +3,8 @@ package interview150
 import (
 	"fmt"
 	"sort"
+
+	"rellik24.com/m/v2/interview150"
 )
 
 // Merge Intervals
@@ -28,7 +30,7 @@ func mergeIntervals(intervals [][]int) [][]int {
 		if interval[0] > val[1] {
 			result = append(result, interval)
 		} else {
-			result[idx] = []int{getMin(val[0], interval[0]), getMax(val[1], interval[1])}
+			result[idx] = []int{interview150.GetMin(val[0], interval[0]), interview150.GetMax(val[1], interval[1])}
 		}
 	}
 	return result

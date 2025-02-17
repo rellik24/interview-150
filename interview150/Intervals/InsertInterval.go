@@ -2,6 +2,8 @@ package interview150
 
 import (
 	"fmt"
+
+	"rellik24.com/m/v2/interview150"
 )
 
 // Insert Interval
@@ -23,8 +25,8 @@ func insertInterval(intervals [][]int, newInterval []int) [][]int {
 
 	// overlap with newInterval
 	for i < len(intervals) && intervals[i][0] <= newInterval[1] {
-		newInterval[0] = getMin(intervals[i][0], newInterval[0])
-		newInterval[1] = getMax(intervals[i][1], newInterval[1])
+		newInterval[0] = interview150.GetMin(intervals[i][0], newInterval[0])
+		newInterval[1] = interview150.GetMax(intervals[i][1], newInterval[1])
 		i++
 	}
 	result = append(result, newInterval)
